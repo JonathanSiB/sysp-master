@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrar-se</title>
+    <!-- Material Icon CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- Your custom styles -->
+    <link rel="stylesheet" href="../css/custom.css">
+    <!-- Used as an example only to position the footer at the end of the page.
+    You can delete these styles or move it to your custom css file -->
+</head>
+
+<body>
+
+    <!-- Navbar goes here -->
+    <nav class="transparent">
+        <div class="nav-wrapper">
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/"><b>Inicio</b></a></li>
+                <li><a href="/aboutus"><b>Sobre</b></a></li>
+                <li><a href="/contactus"><b>Contato</b></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Login -->
+    <div class="section">
+        <form th:action="@{/register}" method="POST" th:object="${user}">
+            <div class="row">
+                <div class="center col offset-s4 s4">
+                    <i class="large material-icons icon-white">account_circle</i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col offset-s4 s4">
+                    <input id="firstName" th:field="*{firstName}" type="text" class="validate">
+                    <label for="firstName">Primeiro nome</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col offset-s4 s4">
+                    <input id="lastName" type="text" th:field="*{lastName}" class="validate">
+                    <label for="lastName">Ultimo nome</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col offset-s4 s4">
+                    <input id="email" type="email" th:field="*{email}" class="validate">
+                    <label for="email">E-mail</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col offset-s4 s4">
+                    <input id="loginid" type="text" th:field="*{userName}" class="validate">
+                    <label for="loginid">Nome de usuário</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col offset-s4 s4">
+                    <input id="password" type="password" th:field="*{password}" class="validate">
+                    <label for="password">Senha</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="center input-field col offset-s4 s4">
+                    <button class="btn-large transparent" type="submit" name="action">
+                        <i class="large material-icons icon-white">add</i>
+                    </button>
+                </div>
+            </div>
+
+         </form>
+    </div>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Materialize JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

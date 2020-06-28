@@ -1,0 +1,44 @@
+body {
+
+    background-image: url("../img/body.jpg");
+   
+    
+}
+
+h1.main {
+
+    color: white;
+    font-size: 700%;
+    
+}
+
+h5.main {
+    color: white;
+}
+
+a.main {
+    color: white;
+    font-size: 150%;
+}
+
+span.logged {
+    padding: 35px;
+}
+
+b.wht {
+    font-size: 120%;
+    color: white;
+}
+
+p.wht {
+    font-size: 100%;
+    color: white;
+}
+i.icon-white {
+    color: white;
+}
+
+input {
+    
+    color: white;
+}
